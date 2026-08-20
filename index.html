@@ -106,8 +106,8 @@ button,input,select{font:inherit}
   <div class="bundle">
     <h3>🔥 عرض خاص محدود</h3>
     <p>اشترِ 3 قطع من أي ماركة (نفس الماركة أو مختلطة)</p>
-    <div class="b-price">بـ 9,900 دج فقط</div>
-    <div class="b-save">بدل 10,900 دج — خصم 1000 دج</div>
+    <div class="b-price">بـ 10,800 دج فقط</div>
+    <div class="b-save">بدل 11,400 دج — خصم 600 دج</div>
     <p class="b-note">العرض ساري حتى 1 سبتمبر فقط</p>
     <a href="#order">اطلب العرض الآن</a>
   </div>
@@ -140,7 +140,7 @@ button,input,select{font:inherit}
 </div>
 
 <script>
-var PRICE=3400,OLD_PRICE=4900,BUNDLE_PRICE=9900,BUNDLE_OLD=10900;
+var PRICE=3800,OLD_PRICE=4900,BUNDLE_PRICE=10800,BUNDLE_OLD=11400;
 var SHEET_WEBHOOK_URL="https://script.google.com/macros/s/AKfycbxNTMwlvQTw4NQeeDF4WYgc52hX1HxU3Ug65yfX6IiD0fFSap82kBjrvFWLBTCeTlLd/exec";
 
 var HERO_IMAGES=[
@@ -243,7 +243,7 @@ function totals(){
 function fmt(x){return x.toLocaleString("en-US");}
 function renderSummary(){
   var t=totals();
-  var extra=t.n>=3?'<div class="good">🎉 مبروك! استفدت من خصم 1000 دج على عرض الـ 3 قطع</div>':'<div class="hint">أضف '+(3-t.n)+' قطع للحصول على خصم 1000 دج</div>';
+  var extra=t.n>=3?'<div class="good">🎉 مبروك! استفدت من خصم 600 دج على عرض الـ 3 قطع</div>':'<div class="hint">أضف '+(3-t.n)+' قطع للحصول على خصم 600 دج</div>';
   document.getElementById("summary").innerHTML=
     '<div>إجمالي القطع: <strong>'+t.n+'</strong></div>'+
     '<div>السعر: <strong>'+fmt(t.productTotal)+' دج</strong></div>'+
